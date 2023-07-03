@@ -1,0 +1,3 @@
+<view>
+    <web-view binderror="zxerror" bindload="jzsuccessclick" src="{{weburl}}"></web-view>
+</view>

@@ -1,0 +1,120 @@
+.content,page {
+    height: 100%;
+}
+
+.content {
+    box-sizing: border-box;
+    padding-bottom: 20rpx;
+}
+
+.location {
+    width: 100%;
+}
+
+.location_top {
+    background: #f4f4f4;
+    color: #444;
+    height: 76rpx;
+    line-height: 76rpx;
+}
+
+.location_bottom,.location_top {
+    font-size: 28rpx;
+    padding: 0 20rpx;
+}
+
+.location_bottom {
+    align-items: center;
+    border-bottom: 2rpx solid #ebebeb;
+    border-top: 2rpx solid #ebebeb;
+    color: #d91f16;
+    display: -webkit-flex;
+    height: 140rpx;
+    line-height: 140rpx;
+}
+
+.address_top {
+    background: #f4f4f4;
+    color: #444;
+    font-size: 28rpx;
+    height: 76rpx;
+    line-height: 76rpx;
+    padding: 0 20rpx;
+}
+
+.address_bottom {
+    background: #fff;
+    border-bottom: 2rpx solid #ebebeb;
+    color: #000;
+    font-size: 32rpx;
+    height: 94rpx;
+    line-height: 94rpx;
+    margin-left: 20rpx;
+    margin-right: 50rpx;
+    padding: 0 20rpx;
+}
+
+.location_img {
+    height: 48rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 125rpx;
+    width: 48rpx;
+}
+
+.add_city {
+    border: 2rpx solid #ebebeb;
+    color: #000;
+}
+
+.add_city,.add_citying {
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-right: 20rpx;
+    text-align: center;
+    width: 228rpx;
+}
+
+.add_citying {
+    border: 2rpx solid #09bb07;
+    color: #09bb07;
+}
+
+.orientation {
+    color: #999;
+    display: inline-block;
+    height: 58rpx;
+    text-align: center;
+    white-space: normal;
+    width: 55rpx;
+}
+
+.orientation_region {
+    font-size: 23rpx;
+    position: fixed;
+    right: 0rpx;
+    top: 60rpx;
+    width: 55rpx;
+}
+
+.orientation_city {
+    color: #000;
+    height: 45rpx;
+    line-height: 45rpx;
+    text-align: center;
+}
+
+.rmcitycls {
+    background: #fff;
+    width: 100%;
+}
+
+.rmcitycls .rmcitycls_item {
+    border-bottom: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+    float: left;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    width: 33%;
+}

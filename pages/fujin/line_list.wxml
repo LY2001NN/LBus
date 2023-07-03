@@ -1,0 +1,30 @@
+<view bindtap="opemapt" style="font-size:14px;text-align:center;color:#08c3a8;background:#f5f5f5;line-height:40px;">
+    <image mode="widthFix" src="../common/3_2.png" style="width:16px;vertical-align: -3px;"></image> {{staname}} - 点击地图导航
+</view>
+<view class="luxiancls" wx:if="{{busrev}}">
+    <view class="luxiancls_row" wx:for="{{busrev}}">
+        <navigator url="./line?&name={{item}}">
+            <view class="luxiancls_row_left">
+                <image src="../common/line.png"></image>
+            </view>
+            <view class="luxiancls_row_right">
+                <view class="luxiancls_row_right_title"> {{item}} </view>
+            </view>
+        </navigator>
+    </view>
+    <view style="clear:both;"></view>
+</view>
+<!-- <view bindtap="not_tongbu" class="luxiancls" style="background:#f5f5f5;margin-top: 0px;padding-top: 3px;" wx:if="{{errot}}">
+    <view class="luxiancls_row" wx:for="{{errot}}">
+        <view class="luxiancls_row_left">
+            <image src="../common/poi.png"></image>
+        </view>
+        <view class="luxiancls_row_right">
+            <view class="luxiancls_row_right_title"> {{item}} </view>
+            <view class="luxiancls_row_right_text">线上未同步，以实际行驶为准！</view>
+            <view style="clear:both;"></view>
+        </view>
+    </view>
+    <view style="clear:both;"></view>
+</view> -->
+<view style="height:20px;"></view>

@@ -1,0 +1,179 @@
+page {
+    background: #fff;
+}
+
+.box {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: fixed;
+    right: 0;
+    width: 600rpx;
+    z-index: 999;
+}
+
+.arrow {
+    border: 5px solid transparent;
+    border-bottom-color: rgba(0,0,0,.55);
+    height: 0;
+    margin-right: 20%;
+    width: 0;
+}
+
+.body {
+    align-items: center;
+    background-color: rgba(0,0,0,.55);
+    border-radius: 3px;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    margin-right: 2px;
+    padding: 5px 10px;
+}
+
+.tips {
+    color: #fff;
+    flex: 1;
+    font-size: 13px;
+}
+
+.newsousuokcls {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    left: 2%;
+    position: relative;
+    width: 96%;
+}
+
+.newsousuokcls_left {
+    float: left;
+    width: 60%;
+}
+
+.newsousuokcls_left input {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    margin: 4px 10px;
+    padding: 5px 10px;
+}
+
+.newsousuokcls_right {
+    float: right;
+    text-align: center;
+    width: 40%;
+}
+
+.newsousuokcls_right button {
+    background: #08c3a8;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    height: 37px;
+    line-height: 37px;
+    margin: 6px 5px;
+    padding: 0;
+}
+
+.luxiancls {
+    background: #fff;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.luxiancls_row {
+    border-bottom: 1px solid #f5f5f5;
+    height: 60px;
+    width: 100%;
+}
+
+.luxiancls_row_left {
+    float: left;
+    height: 60px;
+    text-align: center;
+    width: 60px;
+}
+
+.luxiancls_row_left image {
+    height: 20px;
+    margin-top: 18px;
+    width: 20px;
+}
+
+.luxiancls_row_right {
+    float: left;
+    padding-top: 5px;
+    width: 78%;
+}
+
+.luxiancls_row_right_title {
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.luxiancls_row_right_text,.luxiancls_row_right_title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.luxiancls_row_right_text {
+    color: #999;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.luxiancls_row_right_ico {
+    border: 1px solid #aaa;
+    border-width: 1px 1px 0 0;
+    float: right;
+    height: 10px;
+    line-height: 40px;
+    margin-top: 20px;
+    transform: rotate(45deg);
+    width: 10px;
+}
+
+.wetheacls {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.wetheacls .wetheacls_tow {
+    border-right: 0 solid #cfcfcf;
+    float: left;
+    width: 25%;
+}
+
+.wetheacls .wetheacls_sub {
+    color: #000;
+    font-size: 12px;
+    line-height: 27px;
+    padding: 0 2px;
+}
+
+.osthvies {
+    background: #fff;
+    width: 100%;
+}
+
+.osthvies .osthvies_buts {
+    float: left;
+    margin: 10px 5%;
+    text-align: center;
+    width: 15%;
+}
+
+.osthvies .osthvies_buts image {
+    width: 50%;
+}
+
+.osthvies .osthvies_buts .osthvies_desc {
+    font-size: 12px;
+    text-align: center;
+}

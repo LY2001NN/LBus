@@ -1,0 +1,49 @@
+.luxiancls {
+    background: #fff;
+    margin-top: 3px;
+    width: 100%;
+}
+
+.luxiancls_row {
+    border-bottom: 1px solid #f5f5f5;
+    height: 60px;
+    width: 100%;
+}
+
+.luxiancls_row_left {
+    float: left;
+    height: 60px;
+    text-align: center;
+    width: 60px;
+}
+
+.luxiancls_row_left image {
+    height: 20px;
+    margin-top: 18px;
+    width: 20px;
+}
+
+.luxiancls_row_right {
+    float: left;
+    padding-top: 5px;
+    width: 78%;
+}
+
+.luxiancls_row_right_title {
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.luxiancls_row_right_text,.luxiancls_row_right_title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.luxiancls_row_right_text {
+    color: #999;
+    font-size: 12px;
+    line-height: 12px;
+}

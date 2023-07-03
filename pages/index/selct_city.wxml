@@ -1,0 +1,53 @@
+<scroll-view class="content" scrollIntoView="{{toView}}" scrollWithAnimation="true" scrollY="true">
+    <view class="rmcitycls" id="inToView0">
+        <view class="address_top" style="display: flex;" wx:if="{{cityid}}">
+            <view style="flex: 1;">当前城市</view>
+        </view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="{{cityname}}" data-cityid="{{cityid}}" style="width:100%;text-align:left;padding-left:15px;" wx:if="{{cityid}}">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> {{cityname}} </view>
+        <view style="clear:both;"></view>
+        <view class="address_top">热门城市</view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="北京市" data-cityid="027">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 北京市 </view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="广州市" data-cityid="040">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 广州市 </view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="深圳市" data-cityid="014">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 深圳市 </view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="东莞市" data-cityid="008">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 东莞市 </view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="上海市" data-cityid="034">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 上海市 </view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="成都市" data-cityid="007">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 成都市 </view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="珠海市" data-cityid="242">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 珠海市 </view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="中山市" data-cityid="021">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 中山市 </view>
+        <view bindtap="selectxca" class="rmcitycls_item" data-city="佛山市" data-cityid="019">
+            <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 佛山市 </view>
+        <view style="clear:both;"></view>
+    </view>
+    <ad-custom unitId="adunit-8a90a5e1269c714c"></ad-custom>
+    <view wx:for="{{act_addList}}">
+        <view class="address_top" id="{{'inToView'+item.id}}">{{item.region}}</view>
+        <view wx:for="{{item.city}}">
+            <view bindtap="selectxca" class="address_bottom" data-city="{{item.city}}" data-cityid="{{item.cityid}}">{{item.city}}</view>
+        </view>
+    </view>
+</scroll-view>
+<view class="orientation_region">
+    <view bindtap="scrollToViewFn" class="orientation_city" data-id="{{item.id}}" wx:for="{{orientationList}}">{{item.region}}</view>
+</view>
+<view style="height:10px;"></view>
+<view bindtap="chazhao" style="position: fixed;left: 0px;bottom: 0px;width: 100%;height: 55px;line-height: 55px;font-size: 16px;color: #fff;text-align: center;background: #08c3a8;border-top: 1px solid #08c3a8;font-weight: 600;">
+    <image mode="widthFix" src="../common/weheradd.png" style="width: 20px;vertical-align: -4px;"></image> 快速查找城市</view>
+<view style="position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;background: #fff;z-index: 99;" wx:if="{{kscztype==1}}">
+    <view style="text-align: center;font-size: 16px;line-height: 50px;border-bottom: 1px solid #f5f5f5;">城市搜索查找</view>
+    <input bindconfirm="start_query" bindinput="start_query" confirmType="search" placeholder="输入城市名称查找" style="border:1px solid #ccc;width:70%;margin-left:14%;border-radius: 20px;padding:7px 10px;font-size: 14px;margin-top: 20px;" type="text"></input>
+    <view style="white-space: break-spaces;margin-top: 20px;">
+        <view style="display: inline-block;background: #f5f5f5;padding: 6px 12px;font-size: 15px;margin: 10px;border-bottom: 2px solid #13afbe;border-radius: 5px;color: black;" wx:for="{{reslt}}" wx:for-item="itm">
+            <view bindtap="selectxca" data-city="{{itm.city}}" data-cityid="{{itm.cityid}}">{{itm.city}}</view>
+        </view>
+    </view>
+    <view bindtap="chazhao" style="position: absolute;text-align: center;bottom: 20px;width: 30%;left: 35%;background: rgb(117, 117, 117);color: white;line-height: 35px;border-radius: 30px;">关闭</view>
+</view>

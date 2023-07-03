@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/index/zzz_webview",
+        "pages/index/index",
+        "pages/index/line_map",
+        "pages/index/index_line",
+        "pages/index/selct_city",
+        "pages/index/zzz_city",
+        "pages/fujin/index",
+        "pages/fujin/line",
+        "pages/fujin/line_list",
+        "pages/fujin/z_index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#000",
+        "selectedColor": "#08c3a8",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "pages/common/1_1.png",
+                "selectedIconPath": "pages/common/1_2.png"
+            },
+            {
+                "pagePath": "pages/fujin/index",
+                "text": "附近",
+                "iconPath": "pages/common/3_1.png",
+                "selectedIconPath": "pages/common/3_2.png"
+            }
+        ]
+    },
+    "permission": {
+        "scope.userLocation": {
+          "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "requiredPrivateInfos": [
+        "getLocation",
+        "chooseLocation"
+    ]
+}

@@ -1,0 +1,34 @@
+<view style="height:8px;"></view>
+<view  style="float: left;color:#555;font-size:14px;width:45%;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;text-align:left;text-align:left;line-height:45px;padding-left: 10px;">
+    <image src="../common/dingwei.png" style="width:17px;height:17px;vertical-align:-2px;"></image>{{cityname}} <text style="vertical-align:-3px; "></text>
+</view>
+<view style="float: right;color:#777;font-size:13px;width:45%;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;text-align:right;line-height:45px;padding-right: 10px;" wx:if="{{weatherstr}}">{{weatherstr[0]['time']}} · {{weatherstr[0]['temp']}} · {{weatherstr[0]['condition']}}</view>
+<view style="clear: both;"></view>
+<form bindsubmit="formsubmitclick" reportSubmit="true">
+    <view bindtap="news_look" class="newsousuokcls">
+        <view class="newsousuokcls_left">
+            <input bindconfirm="formsubmitclick" confirmType="search" name="keyworks" placeholder="您要坐什么车？"></input>
+        </view>
+        <view class="newsousuokcls_right">
+            <button formType="submit">查 询</button>
+        </view>
+        <view style="clear:both;"></view>
+    </view>
+</form>
+<view style="height:10px;"></view>
+<view style="height:5px;background:#f5f5f5;"></view>
+<view class="luxiancls" wx:if="{{resultlist}}">
+    <view class="luxiancls_row" wx:for="{{resultlist}}">
+        <navigator url="./index_line?lineId={{item.lineId}}&lineNo={{item.lineNo}}&name={{item.bus_staname}}&direction={{item.direction}}&linestrid={{item.bus_linestrid}}&linenum={{item.bus_linenum}}">
+            <view class="luxiancls_row_left">
+                <image src="../common/line.png"></image>
+            </view>
+            <view class="luxiancls_row_right">
+                <view class="luxiancls_row_right_title"> {{item.bus_staname}}路 </view>
+                <view class="luxiancls_row_right_text">{{item.bus_stastan}} ⇌ {{item.bus_endstan}}</view>
+                <view style="clear:both;"></view>
+            </view>
+        </navigator>
+    </view>
+    <view style="clear:both;"></view>
+</view>

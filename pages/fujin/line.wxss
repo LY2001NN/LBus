@@ -1,0 +1,160 @@
+button {
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    display: inline;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+button::after {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.businco {
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: scaleDraw;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes scaleDraw {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes scaleDraw {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+}
+
+.caidang {
+    background: #08c3a8;
+    border-top: 1px solid #08c3a8;
+    bottom: 0;
+    color: #fff;
+    font-size: 14px;
+    height: 60px;
+    left: 0;
+    line-height: 20px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+}
+
+.caidang_row {
+    float: left;
+    font-weight: 700;
+    width: 50%;
+}
+
+.caidang_row image {
+    height: 22px;
+    margin-top: 6px;
+    width: 22px;
+}
+
+.xfmenucls {
+    bottom: 5%;
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+}
+
+.xfmenucls .xfmenucls_but {
+    background: #08c3a8;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 35px;
+    margin: 13px 0;
+    text-align: center;
+    width: 80px;
+}
+
+.xfmenucls .xfmenucls_but image {
+    height: 18px;
+    margin-right: 2px;
+    vertical-align: -4px;
+    width: 18px;
+}
+
+.xfmenucls .xfmenucls_but button {
+    background-color: #08c3a8;
+    color: #fff;
+}
+
+.staxfleitcs {
+    background: #08c3a8;
+    border-bottom-left-radius: 5px;
+    color: #fff;
+    line-height: 25px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 97px;
+    width: 30%;
+    z-index: 1000;
+}
+
+.staxfleitcs,.staxfleitcs .staxfleitcs_1 {
+    border-top-left-radius: 5px;
+    font-size: 12px;
+}
+
+.staxfleitcs .staxfleitcs_1 {
+    background: #05a19a;
+    line-height: 30px;
+    overflow: hidden;
+    padding: 0 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.staxfleitcs .staxfleitcs_2 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 25px;
+    padding: 0 5px;
+}
+
+.staxfleitcs .staxfleitcs_3 {
+    font-size: 12px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 0 5px 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

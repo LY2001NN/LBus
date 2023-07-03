@@ -1,0 +1,106 @@
+<view style="width:100%;padding:7px 0px;border-bottom:1px solid #f5f5f5;position: fixed;top: 0px;left: 0px;background:white;z-index:9999;">
+    <view style="line-height:20px;padding-left:5%;">
+        <view>
+            <text style="font-size:15px;font-weight:500px;">{{lineinfo.sta_sta}} - {{lineinfo.end_sta}}</text>
+        </view>
+        <view style="font-size:12px;color:#999;">首班:{{lineinfo.fir_time}} 末班:{{lineinfo.end_time}} · 票价：{{lineinfo.bus_money}}</view>
+    </view>
+    <view style="width:100%;text-align:center;font-size:13px;line-height:20px;padding-top:7px;color:#888;">
+        <view style="float:left;width:50%;">
+            <view style="font-size:14px;color:#08c3a8;font-weight:700;">{{xf_staname}}</view>
+            <view style="font-size:12px;color:#999;">{{bus_ing}}</view>
+        </view>
+        <view style="float:left;width:50%;font-weight: 600;" wx:if="{{xf_staname}}">
+            <!-- <view style="font-size:14px;color:#08c3a8;font-weight:700;">{{xf_ddtimes}} </view> -->
+            <view style="font-size:12px;color:#08c3a8;font-weight:700;">{{xf_stanumb_mkm}}</view>
+        </view>
+        <view style="clear:both;"></view>
+    </view>
+    <view style="clear:both;"></view>
+</view>
+<view style="height:80px;"></view>
+<view style="width:69%;margin-left:30%;margin-top:60px;" wx:if="{{line_type_css==1}}">
+    <view style="width:30px;float:left;position: relative;z-index:888;margin-top: 30px;">
+        <view style="width:250px;height:20px;position: absolute;top:{{(item.dis_stat - 1) * 55}}px;" wx:for="{{bus_list}}">
+            <image class="businco" src="../common/buspoi.png" style="width:25px;height:25px;position: relative;left: -5px;"></image>
+            <view style="display: inline-block;font-size:11px;position: absolute;left:-78px;line-height: 25px;color:#ca4242;" wx:if="{{item.distance>0}}">距离下站:{{item.distance}}米</view>
+            <view style="display: inline-block;font-size:11px;position: absolute;left:-35px;line-height: 25px;color:#08c3a8;" wx:if="{{item.distance==0}}">已到站</view>
+        </view>
+    </view>
+    <view style="width:200px;float:left;margin-left:25px;">
+        <view bindtap="shwostationinfo" data-stadex="{{index+1}}" data-staname="{{item.bus_staname}}" wx:for="{{stations}}">
+            <view style="width:30px;height:30px;padding:0px;margin-bottom: -7px;margin-left:4.5px;">
+                <image src="../common/luxian.gif" style="width:5px;height:30px;"></image>
+            </view>
+            <view style="padding:0px;width:14px;height:14px;line-height:14px;border-radius:14px;background:#1ab394;z-index:999;position: relative;">
+                <image src="../common/rowzdian.png" style="width:14px;height:14px;margin-left:-0px;z-index:999;position: relative;"></image>
+                <view style="margin-left:20px;width:180px;font-size:13px;margin-top:-14px;{{click_sta_cls[index+1]}}">{{index+1}} {{item.bus_staname}} <view style="font-size:10px;line-height:15px;color:#f90;" wx:if="{{index==0}}">(起始站)</view>
+                </view>
+            </view>
+            <view style="width:30px;height:30px;padding:0px;margin-top: -7px;margin-left:4.5px;">
+                <image src="../common/luxian.gif" style="width:5px;height:30px;"></image>
+            </view>
+        </view>
+    </view>
+    <view style="clear:both;"></view>
+</view>
+<view style="width:100%;white-space: nowrap;overflow-x: auto; overflow-y: hidden;padding: 40% 0px 10% 0px;position: relative;" wx:if="{{line_type_css==2}}">
+    <view style="position: relative;width:auto;height: 25px;margin: 0px 10%;">
+        <view style="width:25px;height:40px;position: absolute;left:{{item.toppx-4}}px;" wx:for="{{bus_list}}">
+            <view style="font-size:10px;position: absolute;color:#ca4242;top: -20px;line-height: 12px;" wx:if="{{item.distance>0}}">
+                <view>距离下站</view>
+                <view>{{item.distance}}米</view>
+            </view>
+            <view style="font-size:10px;position: absolute;color:#13afbe;top: -10px;line-height: 12px;" wx:if="{{item.distance==0}}">已到站</view>
+            <image src="../common/buspoi2.png" style="width:25px;height:25px;"></image>
+        </view>
+    </view>
+    <view style="display: inline-block;width: 10%;"></view>
+    <view bindtap="shwostationinfo" data-stadex="{{index+1}}" data-staname="{{item.bus_staname}}" style="display: inline-block;" wx:for="{{stations}}">
+        <view style="display: inline-block;margin-right: -7px;">
+            <image src="../common/luxian2.gif" style="height:5px;width:30px;"></image>
+        </view>
+        <view style="display: inline-block;width: 14px;text-align: center;margin: 0px -0px;position: relative;z-index: 999;">
+            <image src="../common/rowzdian.png" style="width:14px;height:14px;vertical-align: -4px;"></image>
+            <view style="writing-mode: tb-rl;font-size: 14px;padding-top: 5px;{{click_sta_cls[index+1]}}">{{item.bus_staname}}<text style="font-size:10px;color:#f90;" wx:if="{{index==0}}">(起始站)</text>
+            </view>
+        </view>
+        <view style="display: inline-block;margin-left: -7px;">
+            <image src="../common/luxian2.gif" style="height:5px;width:30px;"></image>
+        </view>
+    </view>
+    <view style="display: inline-block;width: 10%;"></view>
+    <view style="clear:both;"></view>
+</view>
+<view style="height:50px;"></view>
+<view style="height:65px;"></view>
+<!-- <view bindtap="shikeclick" style="position: fixed;right: 0px;top: 14px;z-index: 9999;background: #08c3a8;color: white;text-align: center;font-size: 13px;line-height: 30px;width: 80px;border-bottom-left-radius: 30px;border-top-left-radius: 30px;">发车时刻表</view> -->
+<view class="caidang">
+    <!-- <view bindtap="huanxiangclick" class="caidang_row">
+        <view>
+            <image src="../common/fanxiang.png"></image>
+        </view>
+        <view>换向</view>
+    </view> -->
+    <!-- <view bindtap="shuaxinclick" class="caidang_row">
+        <view>
+            <image src="../common/shuaxin.png"></image>
+        </view>
+        <view>刷新</view>
+    </view> -->
+    <view bindtap="linemapnagr" class="caidang_row">
+        <view>
+            <image src="../common/weheradd.png"></image>
+        </view>
+        <view>地图</view>
+    </view>
+    <view bindtap="shareline" class="caidang_row">
+        <button hoverClass="none" openType="share">
+            <view>
+                <image src="../common/share.png"></image>
+            </view>
+            <view style="color: white;">推荐</view>
+        </button>
+    </view>
+    <view style="clear:both;"></view>
+</view>

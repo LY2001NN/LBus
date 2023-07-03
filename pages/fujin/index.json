@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "LBus",
+    "navigationBarBackgroundColor": "#08c3a8",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "usingComponents": {}
+}

@@ -1,0 +1,29 @@
+<view style="font-size:12px;padding:10px;background:#f5f5f5;">热门城市</view>
+<view class="rmcitycls">
+    <view bindtap="selectxca" class="rmcitycls_item" data-city="北京市" data-cityid="027">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 北京市 </view>
+    <view bindtap="selectxca" class="rmcitycls_item" data-city="广州市" data-cityid="040">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 广州市 </view>
+    <view bindtap="selectxca" class="rmcitycls_item" data-city="深圳市" data-cityid="014">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 深圳市 </view>
+    <view bindtap="selectxca" class="rmcitycls_item" data-city="东莞市" data-cityid="008">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 东莞市 </view>
+    <view bindtap="selectxca" class="rmcitycls_item" data-city="上海市" data-cityid="034">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 上海市 </view>
+    <view bindtap="selectxca" class="rmcitycls_item" data-city="成都市" data-cityid="007">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 成都市 </view>
+    <view bindtap="selectxca" class="rmcitycls_item" data-city="珠海市" data-cityid="242">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 珠海市 </view>
+    <view bindtap="selectxca" class="rmcitycls_item" data-city="中山市" data-cityid="021">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 中山市 </view>
+    <view bindtap="selectxca" class="rmcitycls_item" data-city="佛山市" data-cityid="019">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> 佛山市 </view>
+    <view style="clear:both;"></view>
+</view>
+<view wx:for="{{newdqlist}}" wx:for-item="itemName">
+    <view style="font-size:15px;padding:2px 15px;">{{index}}</view>
+    <view bindtap="selectxca" class="diquclstxtcls" data-city="{{item.city}}" data-cityid="{{item.cityid}}" wx:for="{{itemName}}">
+        <image src="../common/wzlogo.png" style="width:20px;height:20px;vertical-align:-3px;"></image> {{item.city}}</view>
+</view>
+<view style="line-height:50px;font-size:12px;text-align:center;color:#777;">其他城市持续更新中，请持续关注我们...</view>
+<view style="height:20px;"></view>

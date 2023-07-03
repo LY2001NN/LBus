@@ -1,0 +1,35 @@
+page {
+    background: #f5f5f5;
+}
+
+.rmcitycls {
+    background: #fff;
+    width: 100%;
+}
+
+.rmcitycls .rmcitycls_item {
+    border-right: 1px solid #f5f5f5;
+    float: left;
+    text-align: center;
+    width: 33%;
+}
+
+.diquclstxtcls,.rmcitycls .rmcitycls_item {
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 16px;
+    line-height: 48px;
+}
+
+.diquclstxtcls {
+    background: #fff;
+    padding-left: 10px;
+}
+
+.diquclstxtcls2 {
+    background: #fff;
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: left;
+    text-indent: 15px;
+}

@@ -1,0 +1,33 @@
+<view style="font-size:13px;padding:20px;color:#666;line-height:22px;background:white;" wx:if="{{dingwei_flag==2}}">
+    <view style="width:100%;text-align:center;margin-bottom:20px;">
+        <image mode="widthFix" src="../common/error.png" style="width:25%;"></image>
+    </view>
+    <view style="margin-top:10px;color:#d86a6a;">定位失败： <view style="text-indent:26px;color:#777;">你已拒绝了小程序获取位置，请先允许小程序获取您的定位信息！</view>
+    </view>
+    <view style="margin-top:15px;color:#6ab493;">开通方法： <view style="text-indent:26px;color:#777;">点击打开设置 → 位置信息 → 设置允许使用</view>
+        <view bindtap="open_seting" class="lijiqiehuan">打开设置</view>
+    </view>
+</view>
+<view wx:if="{{dingwei_flag==1}}">
+    <navigator url="./line_list?staname={{item['title']}}&staline={{item.address}}&lat={{item.location.lat}}&lng={{item.location.lng}}" wx:if="{{item['type']==1}}" wx:for="{{luxianstr}}">
+        <view class="sousuolist">
+            <view class="houmian">
+                <view class="houmian_title">{{item['title']}} 
+                <view class="houmian_dis">约{{item['_distance']}}米</view>
+                </view>
+                <view class="houmian_text">{{item.address}}</view>
+            </view>
+            <view style="clear:both;"></view>
+        </view>
+    </navigator>
+</view>
+<view style="font-size:13px;padding:20px;color:#666;line-height:22px;background:white;" wx:if="{{dingwei_flag==3}}">
+    <view style="width:100%;text-align:center;margin-bottom:20px;">
+        <image mode="widthFix" src="../common/error.png" style="width:25%;"></image>
+    </view>
+    <view style="margin-top:10px;color:#d86a6a;">获取失败： <view style="text-indent:26px;color:#777;">所选地区与所在地区不一致，请切换回所在地区！</view>
+    </view>
+    <view style="margin-top:15px;color:#6ab493;">解决方法： <view style="text-indent:26px;color:#777;">所选地区：[{{cityname}}]，是否切换回（{{nowcityname}}）？</view>
+        <view bindtap="dingwei2" class="lijiqiehuan">立即切换</view>
+    </view>
+</view>
